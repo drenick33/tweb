@@ -1,0 +1,65 @@
+
+.caption-tab-container {
+	margin-block-start: 16px;
+}
+
+.caption-tab-format-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 16px;
+}
+
+.caption-tab-format-row > div {
+  display: flex;
+  align-items: center;
+}
+
+.caption-tab-format-button,
+.caption-tab-style-button,
+.caption-tab-alignment-button {
+	font-size: 16px;
+	padding: 8px;
+	border-radius: 5px;
+
+	&:hover {
+		background-color: #2B2B2B;
+	}
+}
+
+.caption-tab-format-button-active {
+	background-color: #2B2B2B;
+}
+
+.caption-tab-section-header {
+	color: #AAA;
+}
+
+.caption-tab-font-button-container {
+	// margin: 16px;
+	margin-block: 16px;
+	width: 100%;
+}
+
+.caption-tab-font-button {
+	width: 100%;
+	padding: 16px;
+	border-radius: 10px;
+	display: flex;
+	&:hover {
+		background-color: #2B2B2B;
+	}
+}
+
+.caption-tab-font-button-active {
+	background-color: #2B2B2B;
+}
+
+.caption-text-prompt {
+	position: absolute;
+	// top: 30%;
+	display: none;
+	padding: 5px;
+	// background-color: white;
+	border: 1px dashed white;
+}

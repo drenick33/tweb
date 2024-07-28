@@ -1,0 +1,143 @@
+.canvas-rotator-container {
+	position: absolute;
+	bottom: 100px;
+	height: 42px;
+	width: 100%;
+	// background-color: slategray;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.canvas-rotator-slider-container {
+	text-align: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px; // is this needed?
+}
+
+.canvas-rotator-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1));
+}
+
+.canvas-rotator-labels {
+	display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+	overflow: hidden;
+}
+
+.canvas-rotator-labels::after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1));
+}
+
+.canvas-rotator-labels span {
+	font-size: 1rem;
+    color: #888;
+    width: 10%;
+    text-align: center;
+	margin-inline: 15px;
+}
+
+.canvas-rotator-labels span.center {
+	color: white;
+	background-color: wheat;
+}
+
+.canvas-rotator-movable-labels {
+	display: flex;
+    justify-content: space-between;
+    width: 300%; /* Adjust to be twice the width for smooth movement */
+    position: relative;
+    left: -50%; /* Start with the labels centered */
+}
+
+.canvas-rotator-movable-labels::after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1));
+}
+
+.canvas-rotator-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: none;
+    outline: none;
+    margin: 0 auto;
+}
+
+.canvas-rotator-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        to right,
+        #444,
+        #444 5px,
+        transparent 5px,
+        transparent 10px
+		);
+	border-radius: 50%
+}
+
+.canvas-rotator-slider::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(
+        to right,
+        #444,
+        #444 5px,
+        transparent 5px,
+        transparent 10px
+    );
+}
+
+.canvas-rotator-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -5px; /* Adjust to center the thumb */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	// make it a triangle
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+
+}
+
+.canvas-rotator-slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    // background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}

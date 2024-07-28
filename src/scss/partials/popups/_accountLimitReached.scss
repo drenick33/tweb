@@ -1,0 +1,94 @@
+.popup-account-limit-reached {
+    $parent: ".popup";
+    user-select: none;
+
+    #{$parent} {
+        &-header {
+            flex-direction: column;
+            align-items: start;
+            margin-block: 0;
+          }
+          &-title {
+            margin-inline-start: 12px;
+          }
+      }
+
+  .infograph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    // background-color: red;
+    gap: 10px
+  }
+
+  .iconContainer {
+    width: 57px;
+    height: 40px;
+    background: var(--premium-gradient);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    &::before {
+        content:"";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-right: 7px solid transparent;
+   border-left: 7px solid transparent;
+   border-top: 7px solid #7e83ff;
+   margin-top: 45px;
+  }
+}
+
+
+  .barContainer {
+    display: flex;
+    width: 328px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    span {
+      display: flex;
+      height: 100%;
+      margin-inline: 12px;
+      align-items: center;
+    }
+  }
+
+  
+
+  .barFreeSection {
+    background-color: #F1F3F5;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .barPremiumSection {
+    background: var(--premium-gradient);
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .description {
+    max-width: 336px;
+    padding-inline: 12px;
+    margin-block: 12px;
+  }
+}

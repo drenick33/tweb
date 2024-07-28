@@ -1,0 +1,63 @@
+.aspect-ratio-title {
+	color: #717579;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 600;
+	margin-inline-start: 16px;
+}
+
+.aspect-ratio-button-full > .i18n {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.aspect-ratio-button-container {
+	width: 50%;
+}
+
+.aspect-ratio-button {
+	&-full {
+		width: 100%;
+		display: flex;
+		padding-block: 12px;
+		padding-inline: 16px;
+		gap: 32px;
+		align-items: center;
+		font-size: 20px;
+		border-radius: 12px;
+
+		&:hover {
+			background-color: #2B2B2B;
+		}
+	}
+
+	&-half {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+		padding-block: 14px;
+		border-radius: 12px;
+	
+		&:hover {
+			background-color: #2B2B2B;
+		}
+	}
+}
+
+.aspect-ratio-button.active {
+	background-color: red;
+}
+
+.aspect-ratio-button-grid {
+	display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    // background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.active-aspect-ratio {
+	background-color: #2B2B2B;
+}
